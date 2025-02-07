@@ -3,6 +3,8 @@ M-CHAT-R Questionnaire Evaluation Module is a a screening tool that helps identi
 #check for deployment
 https://m-chat-r-questionnaire-evaluation-module.vercel.app/home
 
+<img src="client/assets/Ui.png"/>
+
 ###Installing
 ```bash
 cd client
