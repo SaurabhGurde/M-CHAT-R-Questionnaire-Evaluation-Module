@@ -64,7 +64,7 @@ const Home = () => {
       </div>
       <div
         ref={questionContentRef}
-        className="mx-auto w-fit max-sm:p-1 max-sm:mx-2 rounded-[5px] mt-[10vh] border border-black p-10 bg-blue-50 transition-opacity duration-500 ease-in-out overflow-y-auto h-[70vh]"
+        className="mx-auto w-fit max-sm:p-1 max-sm:mx-2 rounded-[5px] mt-[10vh] border border-black p-10 bg-blue-50 transition-opacity duration-500 ease-in-out overflow-y-auto min-h-[70vh] max-sm:min-h-[50vh]"
       >
         {currentQuestion && (
           <Question

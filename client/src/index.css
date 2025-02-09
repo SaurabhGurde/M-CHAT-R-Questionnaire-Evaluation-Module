@@ -30,3 +30,14 @@ code {
     transform: translateX(0);
   }
 }
+
+.slide {
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+.slide-next {
+  transform: translateX(100%);
+}
+.slide-prev {
+  transform: translateX(-100%);
+}

@@ -1,4 +1,5 @@
 import React from "react";
+
 interface PropType {
   value?: any
   label?: string
@@ -12,7 +13,7 @@ const Checkbox: React.FC<PropType> = ({value, label, onCheckboxChange, checked})
       <input
         id="link-checkbox"
         type="checkbox"
-        onChange={() => onCheckboxChange?.(value)}
+        onChange={(e) => value ? onCheckboxChange?.(value) : onCheckboxChange?.(e.target.checked)}
         value={value}
         checked={checked ? checked === value : undefined}
         className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"

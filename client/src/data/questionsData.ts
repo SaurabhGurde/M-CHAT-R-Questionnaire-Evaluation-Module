@@ -13,18 +13,18 @@ const QuestionsData: questionType[] = [
       "If you point at something, what does your child typically do?",
     yesSelected: {
       questions: [
-        " Look at object?",
-        "Point to object?",
-        "Look and comment on object?",
-        "Look if you point and say “look!”?",
+        { title: "Look at object?", example: "pass" },
+        { title: "Point to object?", example: "pass" },
+        { title: "Look and comment on object?", example: "pass" },
+        { title: "Look if you point and say “look!”?", example: "pass" },
       ],
       passCondition: "max-yes",
     },
     noSelected: {
       questions: [
-        " Ignores you?",
-        "Look around room randomly?",
-        "Look at your finger?",
+        { title: "Ignores you?", example: "pass" },
+        { title: "Look around room randomly?", example: "pass" },
+        { title: "Look at your finger?", example: "pass" },
       ],
       passCondition: "max-yes",
     },
@@ -37,7 +37,10 @@ const QuestionsData: questionType[] = [
     yesDescription: "Does he/she…",
     noDescription: "",
     yesSelected: {
-      questions: ["often ignore sounds?", "often ignore people?"],
+      questions: [
+        { title: "often ignore sounds?", example: "pass" },
+        { title: "often ignore people?", example: "pass" },
+      ],
       passCondition: "all-no",
     },
     noSelected: {
@@ -54,31 +57,67 @@ const QuestionsData: questionType[] = [
       "Please give me an example of his/her pretend play. (If parent does not give a PASS example below, ask each individually.)",
     yesSelected: {
       questions: [
-        "Pretend to drink from a toy cup?",
-        "Pretend to eat from a toy spoon or fork?",
-        "Pretend to talk on the telephone?",
-        "Pretend to feed a doll or stuffed animal with real or imaginary food?",
-        "Push a car as if it is going along a pretend road?",
-        "Pretend to be a robot, an airplane, a ballerina, or any other favorite character?",
-        "Put a toy pot on a pretend stove?",
-        "Stir imaginary food?",
-        "Put an action figure or doll into a car or truck as if it is the driver or passenger?",
-        "Pretend to vacuum the rug, sweep the floor, or mow the lawn?",
+        { title: "Pretend to drink from a toy cup?", example: "pass" },
+        { title: "Pretend to eat from a toy spoon or fork?", example: "pass" },
+        { title: "Pretend to talk on the telephone?", example: "pass" },
+        {
+          title:
+            "Pretend to feed a doll or stuffed animal with real or imaginary food?",
+          example: "pass",
+        },
+        {
+          title: "Push a car as if it is going along a pretend road?",
+          example: "pass",
+        },
+        {
+          title:
+            "Pretend to be a robot, an airplane, a ballerina, or any other favorite character?",
+          example: "pass",
+        },
+        { title: "Put a toy pot on a pretend stove?", example: "pass" },
+        { title: "Stir imaginary food?", example: "pass" },
+        {
+          title:
+            "Put an action figure or doll into a car or truck as if it is the driver or passenger?",
+          example: "pass",
+        },
+        {
+          title: "Pretend to vacuum the rug, sweep the floor, or mow the lawn?",
+          example: "pass",
+        },
       ],
       passCondition: "any-yes",
     },
     noSelected: {
       questions: [
-        "Pretend to drink from a toy cup?",
-        "Pretend to eat from a toy spoon or fork?",
-        "Pretend to talk on the telephone?",
-        "Pretend to feed a doll or stuffed animal with real or imaginary food?",
-        "Push a car as if it is going along a pretend road?",
-        "Pretend to be a robot, an airplane, a ballerina, or any other favorite character?",
-        "Put a toy pot on a pretend stove?",
-        "Stir imaginary food?",
-        "Put an action figure or doll into a car or truck as if it is the driver or passenger?",
-        "Pretend to vacuum the rug, sweep the floor, or mow the lawn?",
+        { title: "Pretend to drink from a toy cup?", example: "pass" },
+        { title: "Pretend to eat from a toy spoon or fork?", example: "pass" },
+        { title: "Pretend to talk on the telephone?", example: "pass" },
+        {
+          title:
+            "Pretend to feed a doll or stuffed animal with real or imaginary food?",
+          example: "pass",
+        },
+        {
+          title: "Push a car as if it is going along a pretend road?",
+          example: "pass",
+        },
+        {
+          title:
+            "Pretend to be a robot, an airplane, a ballerina, or any other favorite character?",
+          example: "pass",
+        },
+        { title: "Put a toy pot on a pretend stove?", example: "pass" },
+        { title: "Stir imaginary food?", example: "pass" },
+        {
+          title:
+            "Put an action figure or doll into a car or truck as if it is the driver or passenger?",
+          example: "pass",
+        },
+        {
+          title: "Pretend to vacuum the rug, sweep the floor, or mow the lawn?",
+          example: "pass",
+        },
       ],
       passCondition: "all-yes",
     },
@@ -86,16 +125,26 @@ const QuestionsData: questionType[] = [
   {
     id: 4,
     title: "Does your child like climbing on things?",
-    description: "furniture, playground Yes No equipment, or stairs",
+    description: "furniture, playground equipment, or stairs",
     yesDescription:
       "Please give me an example of something he/she enjoys climbing on. (If parent does not give a PASS example below, ask each individually.)",
     noDescription: "",
     yesSelected: {
-      questions: ["Stairs?", "Chairs?", "Furniture?", "Playground  equipment?"],
+      questions: [
+        { title: "Stairs?", example: "pass" },
+        { title: "Chairs?", example: "pass" },
+        { title: "Furniture?", example: "pass" },
+        { title: "Playground equipment?", example: "pass" },
+      ],
       passCondition: "any-yes",
     },
     noSelected: {
-      questions: ["Stairs?", "Chairs?", "Furniture?", "Playground  equipment?"],
+      questions: [
+        { title: "Stairs?", example: "pass" },
+        { title: "Chairs?", example: "pass" },
+        { title: "Furniture?", example: "pass" },
+        { title: "Playground equipment?", example: "pass" },
+      ],
       passCondition: "all-yes",
     },
   },
@@ -110,10 +159,16 @@ const QuestionsData: questionType[] = [
     noDescription: "",
     yesSelected: {
       questions: [
-        "Wiggle his/her fingers near his/her eyes?",
-        "Hold his/her hands up close to his/her eyes?",
-        "Hold his/her hands off to the side of his/her eyes?",
-        "Flap his/her hands near his/her face?",
+        { title: "Wiggle his/her fingers near his/her eyes?", example: "pass" },
+        {
+          title: "Hold his/her hands up close to his/her eyes?",
+          example: "pass",
+        },
+        {
+          title: "Hold his/her hands off to the side of his/her eyes?",
+          example: "pass",
+        },
+        { title: "Flap his/her hands near his/her face?", example: "pass" },
       ],
       passCondition: "all-no",
     },
@@ -136,10 +191,13 @@ const QuestionsData: questionType[] = [
     },
     noSelected: {
       questions: [
-        "Reach for the object with his/her whole hand?",
-        "Lead you to the object?",
-        "Try to get the object for him/herself?",
-        "Ask for it using words or sounds?",
+        {
+          title: "Reach for the object with his/her whole hand?",
+          example: "pass",
+        },
+        { title: "Lead you to the object?", example: "pass" },
+        { title: "Try to get the object for him/herself?", example: "pass" },
+        { title: "Ask for it using words or sounds?", example: "pass" },
       ],
       passCondition: "any-yes",
     },
@@ -156,19 +214,31 @@ const QuestionsData: questionType[] = [
       "Does your child sometimes want you to see something interesting such as….",
     yesSelected: {
       questions: [
-        "An airplane in the sky?",
-        "A truck on the road?",
-        "A bug on the ground?",
-        "An animal in the yard?",
+        { title: "An airplane in the sky?", example: "pass" },
+        { title: "A truck on the road?", example: "pass" },
+        { title: "A bug on the ground?", example: "pass" },
+        { title: "An animal in the yard?", example: "pass" },
       ],
       passCondition: "any-yes",
     },
     noSelected: {
       questions: [
-        "An airplane in the sky?",
-        "A truck on the road?",
-        "A bug on the ground?",
-        "An animal in the yard?",
+        {
+          title: "An airplane in the sky?",
+          example: "pass",
+        },
+        {
+          title: "A truck on the road?",
+          example: "pass",
+        },
+        {
+          title: "A bug on the ground?",
+          example: "pass",
+        },
+        {
+          title: "An animal in the yard?",
+          example: "pass",
+        },
       ],
       passCondition: "any-yes",
     },
@@ -177,18 +247,26 @@ const QuestionsData: questionType[] = [
     id: 8,
     title: "Is your child interested in other children?",
     description:
-      "does your child watch Yes No other children, smile at them, or go to them?)",
+      "does your child watch other children, smile at them, or go to them?)",
     yesDescription: "",
     noDescription: "",
     yesSelected: {
       questions: [
-        "Is he/she interested in children who are not his/her brother or sister?",
+        {
+          title:
+            "Is he/she interested in children who are not his/her brother or sister?",
+          example: "pass",
+        },
       ],
       passCondition: "all-yes",
     },
     noSelected: {
       questions: [
-        "When you are at the playground or supermarket, does your child usually respond to other children?",
+        {
+          title:
+            "When you are at the playground or supermarket, does your child usually respond to other children?",
+          example: "pass",
+        },
       ],
       passCondition: "all-yes",
     },
@@ -196,30 +274,30 @@ const QuestionsData: questionType[] = [
   {
     id: 9,
     title:
-      "Does your child show you things by bringing them to you or holding them up for you to Yes No see – not to get help, but just to share?",
+      "Does your child show you things by bringing them to you or holding them up for you to see – not to get help, but just to share?",
     description: "showing you a flower, a stuffed animal, or a toy truck)",
     yesDescription:
       "Please give me an example of something he/she might bring to show you or hold up for you to see. (If parent does not give one of the following PASS examples, ask each individually.)",
     noDescription: "",
     yesSelected: {
       questions: [
-        "A picture or toy just to show you?",
-        "A drawing he/she has done?",
-        "A flower he/she has picked?",
-        "A bug he/she has found in the grass?",
-        "A few blocks he/she has put together?",
-        "Other (describe):",
+        { title: "A picture or toy just to show you?", example: "pass" },
+        { title: "A drawing he/she has done?", example: "pass" },
+        { title: "A flower he/she has picked?", example: "pass" },
+        { title: "A bug he/she has found in the grass?", example: "pass" },
+        { title: "A few blocks he/she has put together?", example: "pass" },
+        { title: "Other (describe):", example: "pass" },
       ],
       passCondition: "any-yes",
     },
     noSelected: {
       questions: [
-        "A picture or toy just to show you?",
-        "A drawing he/she has done?",
-        "A flower he/she has picked?",
-        "A bug he/she has found in the grass?",
-        "A few blocks he/she has put together?",
-        "Other (describe):",
+        { title: "A picture or toy just to show you?", example: "pass" },
+        { title: "A drawing he/she has done?", example: "pass" },
+        { title: "A flower he/she has picked?", example: "pass" },
+        { title: "A bug he/she has found in the grass?", example: "pass" },
+        { title: "A few blocks he/she has put together?", example: "pass" },
+        { title: "Other (describe):", example: "pass" },
       ],
       passCondition: "any-yes",
     },
@@ -227,40 +305,357 @@ const QuestionsData: questionType[] = [
   {
     id: 10,
     title: "Does your child respond when you call his or her name?",
-    description: "does he or she look up, talk or babble, or stop what he or she is doing when you call his or her name?)",
-    yesDescription: "Please give me an example of how he/she responds when you call his/her name. (If parent does not give a PASS example below, ask each individually.)",
-    noDescription: "If he/she is not involved in something fun or interesting, what does he/she do when you call his/her name? (If parent does not give a PASS example below, ask each individually.)",
+    description:
+      "does he or she look up, talk or babble, or stop what he or she is doing when you call his or her name?)",
+    yesDescription:
+      "Please give me an example of how he/she responds when you call his/her name. (If parent does not give a PASS example below, ask each individually.)",
+    noDescription:
+      "If he/she is not involved in something fun or interesting, what does he/she do when you call his/her name? (If parent does not give a PASS example below, ask each individually.)",
     yesSelected: {
       questions: [
-        "Look up?",
-        "Talk or babble?",
-        "Stop what he/she is doing?"
+        { title: "Look up?", example: "pass" },
+        { title: "Talk or babble?", example: "pass" },
+        { title: "Stop what he/she is doing?", example: "pass" },
       ],
-      passCondition: "all-yes"
+      passCondition: "all-yes",
     },
     noSelected: {
       questions: [
-        "Make no response?",
-        "Seem to hear but ignores parent?",
-        "Respond only if parent is right in front of the child's face?",
-        "Respond only if touched?"
+        { title: "Make no response?", example: "pass" },
+        { title: "Seem to hear but ignores parent?", example: "pass" },
+        {
+          title:
+            "Respond only if parent is right in front of the child's face?",
+          example: "pass",
+        },
+        { title: "Respond only if touched?", example: "pass" },
       ],
-      passCondition: "all-no"
+      passCondition: "all-no",
+    },
+  },
+  {
+    id: 11,
+    title: "When you smile at your child, does he or she smile back at you?",
+    description: "",
+    yesDescription: "",
+    noDescription: "",
+    yesSelected: {
+      questions: [],
+      passCondition: "pass-direct",
+    },
+    noSelected: {
+      questions: [
+        { title: "Smile when you smile?", example: "pass" },
+        { title: "Smile when you enter the room?", example: "pass" },
+        { title: "Smile when you return from being away?", example: "pass" },
+        { title: "Always smile?", example: "fail" },
+        { title: "Smile at a favorite toy or activity?", example: "fail" },
+        {
+          title: "Smile randomly or at nothing in particular?",
+          example: "fail",
+        },
+      ],
+      passCondition: "yes-to-only-pass-fail",
+
+    },
+  },
+  {
+    id: 12,
+    title: "Does your child get upset by everyday noises?",
+    description:
+      "does your child scream or cry to noise such as a vacuum cleaner or loud music?",
+    yesDescription: "Does your child have a negative reaction to the sound of…",
+    noDescription: "",
+    yesSelected: {
+      questions: [
+        { title: "A washing machine?", example: "pass" },
+        { title: "Babies crying?", example: "pass" },
+        { title: "Vacuum cleaner?", example: "pass" },
+        { title: "Hairdryer?", example: "pass" },
+        { title: "Traffic?", example: "pass" },
+        { title: "Babies squealing or screeching?", example: "pass" },
+        { title: "Loud music?", example: "pass" },
+        { title: "Telephone/doorbell ringing?", example: "pass" },
+        { title: "Noisy places such as a supermarket or restaurant?",example: "pass",},
+      ],
+      passCondition: "yes-to-one-or-less",
+      nextLayerCondition: 'yes-to-two-or-more',
+      nextLayer: {
+        title: "How does your child react to those noises? (If parent does not give a PASS example below, ask each individually.)",
+        questions: [
+          {title: "Calmly cover his/her ears?", example: "pass"},
+          {title: "Tell you that he/she does not ", example: "pass"},
+          {title: "like the noise?", example: "pass"},
+          {title: "Scream?", example: "fail"},
+          {title: "Cry?", example: "fail"},
+          {title: "Cover his/her ears while upset?", example: "fail"},
+        ],
+        passCondition: 'yes-to-only-pass-fail'
+      }
+    },
+    noSelected: {
+      questions: [],
+      passCondition: "pass-direct",
+    },
+  },
+  {
+    id: 13,
+    title: "Does your child walk?",
+    description: "",
+    yesDescription: "",
+    noDescription: "",
+    yesSelected: {
+      questions: [
+        { title: "Does he/she walk without holding on to anything?", example: "pass" },
+      ],
+      passCondition: "all-yes",
+    },
+    noSelected: {
+      questions: [],
+      passCondition: "fail-direct",
+    },
+  },
+  {
+    id: 14,
+    title: "Does your child look you in the eye when you are talking to him or her, playing with him or her, or dressing him or her?",
+    description: "",
+    yesDescription: "",
+    noDescription: "",
+    yesSelected: {
+      title: "Please give me an example of when he/she looks you in the eye. (If parent does not give one of the following PASS examples, ask each individually.)",
+      questions: [
+        { title: "When he/she needs something?", example: "" },
+        { title: "When you are playing with him/her?", example: "" },
+        { title: "During feeding?", example: "" },
+        { title: "During diaper changes?", example: "" },
+        { title: "When you are reading him/her a story?", example: "" },
+        { title: "When you are talking to him/her?", example: "" },
+      ],
+      passCondition: "yes-to-two-or-more",
+      nextLayerCondition: "yes-to-only-one",
+      nextLayer: {
+        questions: [
+          {title: "Does your child look you in the eye every day?", example: ""},
+          {title: "On a day when you are together all day, does he/she look you in the eye at least 5 times?", example: ""}
+        ],
+        passCondition: "all-yes"
+      }
+    },
+    noSelected: {
+      title: "Does he/she look you in the eye…",
+      questions: [
+        { title: "When he/she needs something?", example: "" },
+        { title: "When you are playing with him/her?", example: "" },
+        { title: "During feeding?", example: "" },
+        { title: "During diaper changes?", example: "" },
+        { title: "When you are reading him/her a story?", example: "" },
+        { title: "When you are talking to him/her?", example: "" },
+      ],
+      passCondition: "yes-to-two-or-more",
+      nextLayerCondition: "yes-to-only-one",
+      nextLayer: {
+        questions: [
+          {title: "Does your child look you in the eye every day?", example: ""},
+          {title: "On a day when you are together all day, does he/she look you in the eye at least 5 times?", example: ""}
+        ],
+        passCondition: "all-yes"
+      }
+    },
+  },
+  {
+    id: 15,
+    title: "Does your child try to copy what you do?",
+    description: "wave bye-bye, clap, or make a funny noise when you do)",
+    yesDescription: "",
+    noDescription: "",
+    yesSelected: {
+      title: "Please give me an example of something he/she would try to copy. (If parent does not give one of the following pass examples, ask each individually.)",
+      questions: [
+        { title: "Stick out your tongue?", example: "" },
+        { title: "Make a funny sound? ", example: "" },
+        { title: "Wave good bye?", example: "" },
+        { title: "Clap your hands?", example: "" },
+        { title: "Put your fingers to your lips", example: "" },
+        { title: "to signal “Shhh”?", example: "" },
+        { title: "Blow a kiss?", example: "" },
+      ],
+      passCondition: "yes-to-two-or-more",
+    },
+    noSelected: {
+      title: "Does your child try to copy you if you…",
+      questions: [
+        { title: "Stick out your tongue?", example: "" },
+        { title: "Make a funny sound? ", example: "" },
+        { title: "Wave good bye?", example: "" },
+        { title: "Clap your hands?", example: "" },
+        { title: "Put your fingers to your lips", example: "" },
+        { title: "to signal “Shhh”?", example: "" },
+        { title: "Blow a kiss?", example: "" },
+      ],
+      passCondition: "yes-to-two-or-more",
+    },
+  },
+  {
+    id: 16,
+    title: "If you turn your head to look at something, does your child look around to see what you are looking at?",
+    description: "wave bye-bye, clap, or make a funny noise when you do)",
+    yesDescription: "",
+    noDescription: "",
+    yesSelected: {
+      title: "Please give me an example of something he/she would try to copy. (If parent does not give one of the following pass examples, ask each individually.)",
+      questions: [],
+      passCondition: "pass-direct",
+    },
+    noSelected: {
+      title: "What does he/she do when you turn to look at something? (If parent does not give a PASS example below, ask each individually.)",
+      questions: [
+        { title: "Look toward the thing you are looking at?", example: "pass" },
+        { title: "Point toward the thing you are looking at? ", example: "pass" },
+        { title: "Look around to see what you are looking at?", example: "pass" },
+        { title: "Ignore you?", example: "fail" },
+        { title: "Look at your face?", example: "fail" },
+      ],
+      passCondition: "yes-to-only-pass-fail",
+    },
+  },
+  {
+    id: 17,
+    title: "Does your child try to get you to watch him or her?",
+    description: "does your child look at you for praise, or say “look” or “watch me”?",
+    yesDescription: "",
+    noDescription: "",
+    yesSelected: {
+      title: "Please give me an example of how he/she would try to get you to watch him/her. (If parent does not give a PASS example below, ask each individually.)",
+      questions: [
+        { title: "Say “Look!” or “Watch me!”?", example: "pass" },
+        { title: "Babble or make a noise to get you to watch", example: "pass" },
+        { title: "what he/ she is doing?", example: "pass" },
+        { title: "Look at you to get praise or comment?", example: "pass" },
+        { title: "Keep looking to see if you are looking?", example: "pass" },
+      ],
+      passCondition: "any-yes",
+    },
+    noSelected: {
+      title: "Does he/she…",
+      questions: [
+        { title: "Say “Look!” or “Watch me!”?", example: "pass" },
+        { title: "Babble or make a noise to get you to watch", example: "pass" },
+        { title: "what he/ she is doing?", example: "pass" },
+        { title: "Look at you to get praise or comment?", example: "pass" },
+        { title: "Keep looking to see if you are looking?", example: "pass" },
+      ],
+      passCondition: "any-yes",
+    },
+  },
+  {
+    id: 18,
+    title: "Does your child understand when you tell him or her to do something?",
+    description: "if you don’t point, can your child understand “put the book on the chair” or “bring me the blanket”?)",
+    yesDescription: "",
+    noDescription: "",
+    yesSelected: {
+      title: "Please give me an example of how you know he/she understands you.",
+      questions: [
+        { title: "If example indicates that child can understand a simple command without nonverbal cues", example: "" },
+      ],
+      passCondition: "all-yes",
+      nextLayerCondition: 'all-no',
+      nextLayer: {
+        questions: [
+          {title: "When the situation gives him/her a clue, can he/she follow a command? For example when you are dressed to go out and you tell him/her to get his/her shoes, does he/she understand?",  example: ""},
+          {title: "If it is dinnertime and food is on the table, and you tell the child to sit down, will he/she come sit at the table?",  example: ""}
+        ],
+        passCondition: 'next-layer',
+        nextLayerCondition: 'all-yes',
+        nextLayer: {
+          title: 'When the situation does not give any clues, can he/she follow a command? For example… (ask until you get a yes or use all examples)',
+          questions: [
+            {title: 'If you say, “Show me your shoe” without pointing, making gestures, or giving hints (when you are not going out or getting dressed), does your child show you his/her shoe? ', example: ''},
+            {title: 'If you say, “Bring me the blanket” or ask for another object without pointing, making gestures, or giving hints, does your child bring it to you?', example: ''},
+            {title: ' If you say, “Put the book on the chair” without pointing, making gestures, or giving any other hints , does your child put the book on the chair?', example: ''}
+          ],
+          passCondition: 'any-yes'
+        }
+      }
+    },
+    noSelected: {
+        questions: [
+          {title: "When the situation gives him/her a clue, can he/she follow a command? For example when you are dressed to go out and you tell him/her to get his/her shoes, does he/she understand?",  example: ""},
+          {title: "If it is dinnertime and food is on the table, and you tell the child to sit down, will he/she come sit at the table?",  example: ""}
+        ],
+        passCondition: 'next-layer',
+        nextLayerCondition: 'all-yes',
+        nextLayer: {
+          title: 'When the situation does not give any clues, can he/she follow a command? For example… (ask until you get a yes or use all examples)',
+          questions: [
+            {title: 'If you say, “Show me your shoe” without pointing, making gestures, or giving hints (when you are not going out or getting dressed), does your child show you his/her shoe? ', example: ''},
+            {title: 'If you say, “Bring me the blanket” or ask for another object without pointing, making gestures, or giving hints, does your child bring it to you?', example: ''},
+            {title: ' If you say, “Put the book on the chair” without pointing, making gestures, or giving any other hints , does your child put the book on the chair?', example: ''}
+          ],
+          passCondition: 'any-yes'
+        }
+    },
+  },
+  {
+    id: 19,
+    title: "If something new happens, does your child look at your face to see how you feel about it?",
+    description: "if he or she hears a strange or funny noise, or sees a new toy, will he or she look at your face?",
+    yesDescription: "",
+    noDescription: "",
+    yesSelected: {
+      questions: [],
+      passCondition: "pass-direct",
+    },
+    noSelected: {
+        questions: [
+          {title: "If your child hears a strange or scary noise, will he/she look at you before responding?",  example: ""},
+        ],
+        passCondition: 'all-yes',
+        nextLayerCondition: 'all-no',
+        nextLayer: {
+          questions: [
+            {title: 'Does your child look at you when someone new approaches?', example: ''},
+          ],
+          passCondition: 'all-yes',
+          nextLayerCondition: "all-no",
+          nextLayer: {
+            questions: [
+              {title: 'Does your child look at you when he/she is faced with something unfamiliar or a little scary?', example: ''},
+            ],
+            passCondition: 'all-yes',
+          }
+        }
     },
   },
   // {
-  //   id: 2,
-  //   title: "",
-  //   description: "",
+  //   id: 20,
+  //   title: "Does your child like movement activities?",
+  //   description: "being swung or bounced on your knee?",
   //   yesDescription: "",
   //   noDescription: "",
   //   yesSelected: {
   //     questions: [],
-  //     passCondition: ""
+  //     passCondition: "pass-direct",
   //   },
   //   noSelected: {
-  //     questions: [],
-  //     passCondition: ''
+  //       questions: [
+  //         {title: "If your child hears a strange or scary noise, will he/she look at you before responding?",  example: ""},
+  //       ],
+  //       passCondition: 'all-yes',
+  //       nextLayerCondition: 'all-no',
+  //       nextLayer: {
+  //         questions: [
+  //           {title: 'Does your child look at you when someone new approaches?', example: ''},
+  //         ],
+  //         passCondition: 'all-yes',
+  //         nextLayerCondition: "all-no",
+  //         nextLayer: {
+  //           questions: [
+  //             {title: 'Does your child look at you when he/she is faced with something unfamiliar or a little scary?', example: ''},
+  //           ],
+  //           passCondition: 'all-yes',
+  //         }
+  //       }
   //   },
   // },
 ];
