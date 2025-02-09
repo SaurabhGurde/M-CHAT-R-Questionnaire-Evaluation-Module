@@ -67,6 +67,7 @@ const Question: React.FC<PropType> = ({
     setMainAnswer(data);
     setSubAnswer([]);
     setCurrentSubQuestionIndex(0);
+    setSubAnswerProgress(0)
     if (data === "yes") {
       setCurrentLayer(question.yesSelected);
       if (question.yesSelected.questions.length === 0) {

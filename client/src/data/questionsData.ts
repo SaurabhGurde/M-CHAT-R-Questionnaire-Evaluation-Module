@@ -502,7 +502,6 @@ const QuestionsData: questionType[] = [
     yesDescription: "",
     noDescription: "",
     yesSelected: {
-      title: "Please give me an example of something he/she would try to copy. (If parent does not give one of the following pass examples, ask each individually.)",
       questions: [],
       passCondition: "pass-direct",
     },
