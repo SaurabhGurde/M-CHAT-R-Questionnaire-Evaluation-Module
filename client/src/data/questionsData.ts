@@ -626,37 +626,36 @@ const QuestionsData: questionType[] = [
         }
     },
   },
-  // {
-  //   id: 20,
-  //   title: "Does your child like movement activities?",
-  //   description: "being swung or bounced on your knee?",
-  //   yesDescription: "",
-  //   noDescription: "",
-  //   yesSelected: {
-  //     questions: [],
-  //     passCondition: "pass-direct",
-  //   },
-  //   noSelected: {
-  //       questions: [
-  //         {title: "If your child hears a strange or scary noise, will he/she look at you before responding?",  example: ""},
-  //       ],
-  //       passCondition: 'all-yes',
-  //       nextLayerCondition: 'all-no',
-  //       nextLayer: {
-  //         questions: [
-  //           {title: 'Does your child look at you when someone new approaches?', example: ''},
-  //         ],
-  //         passCondition: 'all-yes',
-  //         nextLayerCondition: "all-no",
-  //         nextLayer: {
-  //           questions: [
-  //             {title: 'Does your child look at you when he/she is faced with something unfamiliar or a little scary?', example: ''},
-  //           ],
-  //           passCondition: 'all-yes',
-  //         }
-  //       }
-  //   },
-  // },
+  {
+    id: 20,
+    title: "Does your child like movement activities?",
+    description: "being swung or bounced on your knee?",
+    yesDescription: "",
+    noDescription: "",
+    yesSelected: {
+      questions: [{title: "Does he/she enjoy being bounced or swung?", example: ""}],
+      passCondition: "pass-direct",
+      nextLayerCondition: 'all-no',
+      nextLayer: {
+        title: "When you swing or bounce him/her, how does he/she react? (If parent does not give an example below, ask each individually.)",
+        questions: [
+          {title: "Laugh or smile?", example: ""},
+          {title: "Talk or babble?", example: ""},
+          {title: "Request more by holding out his/her arms?", example: ""}
+        ],
+        passCondition: "any-yes",
+      }
+    },
+    noSelected: {
+      title: "When you swing or bounce him/her, how does he/she react? (If parent does not give an example below, ask each individually.)",
+      questions: [
+        {title: "Laugh or smile?", example: ""},
+        {title: "Talk or babble?", example: ""},
+        {title: "Request more by holding out his/her arms?", example: ""}
+      ],
+      passCondition: "any-yes",
+    },
+  },
 ];
 
 export default QuestionsData;
